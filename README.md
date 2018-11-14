@@ -48,7 +48,7 @@ HEADERS += \
 ```
 ### Step 4: Include the library header file and start using it
 Include EasyQtSql.h header file and start using the library.
-```
+```c++
 #include <QCoreApplication>
 #include "EasyQtSql.h"
 #include "TestObject.h"

@@ -131,5 +131,5 @@ Tests are implemented with [QtTest](http://doc.qt.io/archives/qt-5.7/qttest-inde
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](EasyQtSql/EasyQtSql/License.txt).
 

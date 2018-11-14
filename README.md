@@ -1,5 +1,5 @@
 # EasyQtSql
-EasyQtSql is a lightweight header-only C++ library for quick and easy SQL querying with QtSql classes.
+[EasyQtSql](https://kramolnic.github.io/EasyQtSql/) is a lightweight header-only C++ library for quick and easy SQL querying with QtSql classes.
 
 ## Getting Started
 ### Prerequisites

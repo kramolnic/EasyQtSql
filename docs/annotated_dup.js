@@ -13,5 +13,6 @@ var annotated_dup =
     [ "PreparedQuery", "class_prepared_query.htm", "class_prepared_query" ],
     [ "QueryResult", "class_query_result.htm", "class_query_result" ],
     [ "Transaction", "class_transaction.htm", "class_transaction" ],
-    [ "UpdateQuery", "class_update_query.htm", "class_update_query" ]
+    [ "UpdateQuery", "class_update_query.htm", "class_update_query" ],
+    [ "Util", "class_util.htm", null ]
 ];

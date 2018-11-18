@@ -11,6 +11,7 @@ var _easy_qt_sql_8h =
     [ "InsertQuery", "class_easy_qt_sql_1_1_insert_query.htm", "class_easy_qt_sql_1_1_insert_query" ],
     [ "UpdateQuery", "class_easy_qt_sql_1_1_update_query.htm", "class_easy_qt_sql_1_1_update_query" ],
     [ "DeleteQuery", "class_easy_qt_sql_1_1_delete_query.htm", "class_easy_qt_sql_1_1_delete_query" ],
+    [ "Util", "class_easy_qt_sql_1_1_util.htm", null ],
     [ "Database", "class_easy_qt_sql_1_1_database.htm", "class_easy_qt_sql_1_1_database" ],
     [ "Transaction", "class_easy_qt_sql_1_1_transaction.htm", "class_easy_qt_sql_1_1_transaction" ],
     [ "DB_EXCEPTIONS_ENABLED", "_easy_qt_sql_8h.htm#a3fe9168ca9c0b1bfd736b4ee04915da0", null ]

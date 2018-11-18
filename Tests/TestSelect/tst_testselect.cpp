@@ -51,6 +51,7 @@ private slots:
    void test_case14_1();
    void test_case15();
    void test_case16();
+   void test_case17();
 
 private:
 
@@ -543,8 +544,196 @@ void TestSelect::test_case16() //fetch rows
    QCOMPARE(i, rows.count());
 }
 
+void TestSelect::test_case17() //fetch rows
+{
+   Transaction t;
 
+   const auto &rows = testData();
 
+   {
+      int curRow = 0;
+      QVector<Row> actualRows;
+
+      const int count = t.each(selectABCDQuery, [&curRow, &rows, &actualRows](const QueryResult &row)
+      {
+         const auto &rowData = rows.at(curRow);
+
+         Row r;
+         r.a = row.value(0).toInt();
+         r.b = row.value(1).toInt();
+         r.c = row.value(2).toInt();
+         r.d = row.value(3).toString();
+
+         actualRows.append(r);
+
+         QCOMPARE(r.a, rowData.a);
+         QCOMPARE(r.b, rowData.b);
+         QCOMPARE(r.c, rowData.c);
+         QCOMPARE(r.d, rowData.d);
+
+         ++curRow;
+      });
+
+      QCOMPARE(count, rowCount());
+      QCOMPARE(actualRows.count(), rowCount());
+   }
+
+   {
+      const int count = t.first(selectABCDQuery, [&rows](const QueryResult &row)
+      {
+         const auto &rowData = rows.at(0);
+
+         QCOMPARE(row.value(0).toInt(), rowData.a);
+         QCOMPARE(row.value(1).toInt(), rowData.b);
+         QCOMPARE(row.value(2).toInt(), rowData.c);
+         QCOMPARE(row.value(3).toString(), rowData.d);
+      });
+
+      QCOMPARE(count, 1);
+   }
+
+   {
+      int curRow = 0;
+      const int topCount = 2;
+      QVector<Row> actualRows;
+
+      const int count = t.top(selectABCDQuery, topCount, [&curRow, &rows, &actualRows](const QueryResult &row)
+      {
+         const auto &rowData = rows.at(curRow);
+
+         Row r;
+         r.a = row.value(0).toInt();
+         r.b = row.value(1).toInt();
+         r.c = row.value(2).toInt();
+         r.d = row.value(3).toString();
+
+         actualRows.append(r);
+
+         QCOMPARE(r.a, rowData.a);
+         QCOMPARE(r.b, rowData.b);
+         QCOMPARE(r.c, rowData.c);
+         QCOMPARE(r.d, rowData.d);
+
+         ++curRow;
+      });
+
+      QCOMPARE(count, topCount);
+      QCOMPARE(actualRows.count(), topCount);
+   }
+
+   {
+      int curRow = 1;
+      const int resCount = 1;
+      QVector<Row> actualRows;
+
+      const int count = t.range(selectABCDQuery, curRow, resCount, [&curRow, &rows, &actualRows](const QueryResult &row)
+      {
+         const auto &rowData = rows.at(curRow);
+
+         qDebug() << row.toMap() << curRow;
+
+         Row r;
+         r.a = row.value(0).toInt();
+         r.b = row.value(1).toInt();
+         r.c = row.value(2).toInt();
+         r.d = row.value(3).toString();
+
+         actualRows.append(r);
+
+         QCOMPARE(r.a, rowData.a);
+         QCOMPARE(r.b, rowData.b);
+         QCOMPARE(r.c, rowData.c);
+         QCOMPARE(r.d, rowData.d);
+
+         ++curRow;
+      });
+
+      QCOMPARE(count, resCount);
+      QCOMPARE(actualRows.count(), resCount);
+   }
+
+   {
+      int curRow = 0;
+      const int resCount = 3;
+      QVector<Row> actualRows;
+
+      const int count = t.range(selectABCDQuery, curRow, resCount, [&curRow, &rows, &actualRows](const QueryResult &row)
+      {
+         const auto &rowData = rows.at(curRow);
+
+         qDebug() << row.toMap() << curRow;
+
+         Row r;
+         r.a = row.value(0).toInt();
+         r.b = row.value(1).toInt();
+         r.c = row.value(2).toInt();
+         r.d = row.value(3).toString();
+
+         actualRows.append(r);
+
+         QCOMPARE(r.a, rowData.a);
+         QCOMPARE(r.b, rowData.b);
+         QCOMPARE(r.c, rowData.c);
+         QCOMPARE(r.d, rowData.d);
+
+         ++curRow;
+      });
+
+      QCOMPARE(count, resCount);
+      QCOMPARE(actualRows.count(), resCount);
+   }
+
+   {
+      int curRow = 0;
+      const int resCount = 10;
+      QVector<Row> actualRows;
+
+      const int count = t.range(selectABCDQuery, curRow, resCount, [&curRow, &rows, &actualRows](const QueryResult &row)
+      {
+         const auto &rowData = rows.at(curRow);
+
+         qDebug() << row.toMap() << curRow;
+
+         Row r;
+         r.a = row.value(0).toInt();
+         r.b = row.value(1).toInt();
+         r.c = row.value(2).toInt();
+         r.d = row.value(3).toString();
+
+         actualRows.append(r);
+
+         QCOMPARE(r.a, rowData.a);
+         QCOMPARE(r.b, rowData.b);
+         QCOMPARE(r.c, rowData.c);
+         QCOMPARE(r.d, rowData.d);
+
+         ++curRow;
+      });
+
+      QCOMPARE(count, rowCount());
+      QCOMPARE(actualRows.count(), rowCount());
+   }
+
+   {
+      const int count = t.range(selectABCDQuery, 3, 10, [](const QueryResult &row)
+      {
+         Q_UNUSED(row);
+         QFAIL("UNSEXPECTED");
+      });
+
+      QCOMPARE(count, 0);
+   }
+
+   {
+      const int count = t.range(selectABCDQuery, 10, 10, [](const QueryResult &row)
+      {
+         Q_UNUSED(row);
+         QFAIL("UNSEXPECTED");
+      });
+
+      QCOMPARE(count, 0);
+   }
+}
 
 QTEST_APPLESS_MAIN(TestSelect)
 

@@ -418,6 +418,23 @@ public:
    }
 
    /*!
+   \brief Returns scalar value converted to type T (the value of the first column of the current row)
+    */
+   template <typename T>
+   T scalar() const
+   {
+      return m_query.value(0).value<T>();
+   }
+
+   /*!
+   \brief Returns scalar value (the value of the first column of the current row)
+    */
+   QVariant scalar() const
+   {
+      return m_query.value(0);
+   }
+
+   /*!
    \brief Assigns a variable the value from the current record
 
    The method has a variable number of parameters, which allows filling the list of variables with values from the current record in single call.

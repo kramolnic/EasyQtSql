@@ -8,8 +8,8 @@ var hierarchy =
     ] ],
     [ "EasyQtSql::DeleteQuery", "class_easy_qt_sql_1_1_delete_query.htm", null ],
     [ "DeleteQuery", "class_delete_query.htm", null ],
-    [ "InsertQuery", "class_insert_query.htm", null ],
     [ "EasyQtSql::InsertQuery", "class_easy_qt_sql_1_1_insert_query.htm", null ],
+    [ "InsertQuery", "class_insert_query.htm", null ],
     [ "NonQueryResult", "class_non_query_result.htm", null ],
     [ "EasyQtSql::NonQueryResult", "class_easy_qt_sql_1_1_non_query_result.htm", null ],
     [ "ParamDirectionWrapper", "struct_param_direction_wrapper.htm", [
@@ -28,8 +28,10 @@ var hierarchy =
       [ "DBException", "class_d_b_exception.htm", null ],
       [ "EasyQtSql::DBException", "class_easy_qt_sql_1_1_d_b_exception.htm", null ]
     ] ],
-    [ "QueryResult", "class_query_result.htm", null ],
     [ "EasyQtSql::QueryResult", "class_easy_qt_sql_1_1_query_result.htm", null ],
+    [ "QueryResult", "class_query_result.htm", null ],
+    [ "EasyQtSql::UpdateQuery", "class_easy_qt_sql_1_1_update_query.htm", null ],
     [ "UpdateQuery", "class_update_query.htm", null ],
-    [ "EasyQtSql::UpdateQuery", "class_easy_qt_sql_1_1_update_query.htm", null ]
+    [ "EasyQtSql::Util", "class_easy_qt_sql_1_1_util.htm", null ],
+    [ "Util", "class_util.htm", null ]
 ];

@@ -41,6 +41,8 @@ var class_easy_qt_sql_1_1_query_result =
     [ "numRowsAffected", "class_easy_qt_sql_1_1_query_result.htm#af277d176f33fce29dd0049d4b267912c", null ],
     [ "parseToIntVector", "class_easy_qt_sql_1_1_query_result.htm#a118e2ac7aa817a6677b71eae61df3801", null ],
     [ "previous", "class_easy_qt_sql_1_1_query_result.htm#a6617545f5395115ff050005a5939c2a6", null ],
+    [ "scalar", "class_easy_qt_sql_1_1_query_result.htm#a46595f825d0fd0a5c765bc6d301fccb9", null ],
+    [ "scalar", "class_easy_qt_sql_1_1_query_result.htm#aa859ae4f8e2093494f8b2849d6f4f842", null ],
     [ "seek", "class_easy_qt_sql_1_1_query_result.htm#a0b1d233aa138f29eb2e5e9c1a04c8401", null ],
     [ "size", "class_easy_qt_sql_1_1_query_result.htm#a9cd87f53f90c9061ab8d9ae66cf97e4a", null ],
     [ "toList", "class_easy_qt_sql_1_1_query_result.htm#a7bc07b088b7abea529171589c3bdce09", null ],

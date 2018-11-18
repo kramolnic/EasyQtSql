@@ -12,5 +12,6 @@ var namespace_easy_qt_sql =
     [ "PreparedQuery", "class_easy_qt_sql_1_1_prepared_query.htm", "class_easy_qt_sql_1_1_prepared_query" ],
     [ "QueryResult", "class_easy_qt_sql_1_1_query_result.htm", "class_easy_qt_sql_1_1_query_result" ],
     [ "Transaction", "class_easy_qt_sql_1_1_transaction.htm", "class_easy_qt_sql_1_1_transaction" ],
-    [ "UpdateQuery", "class_easy_qt_sql_1_1_update_query.htm", "class_easy_qt_sql_1_1_update_query" ]
+    [ "UpdateQuery", "class_easy_qt_sql_1_1_update_query.htm", "class_easy_qt_sql_1_1_update_query" ],
+    [ "Util", "class_easy_qt_sql_1_1_util.htm", null ]
 ];

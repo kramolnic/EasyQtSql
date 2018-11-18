@@ -38,6 +38,78 @@
 
 #endif
 
+class Util
+{
+public:
+
+   template<typename Func>
+   static int each(QueryResult &res, Func&& f)
+   {
+      int rowCount = 0;
+
+      if (res.isActive())
+      {
+         while (res.next())
+         {
+            f(res);
+            ++rowCount;
+         }
+      }
+
+      return rowCount;
+   }
+
+   template<typename Func>
+   static int first(QueryResult &res, Func&& f)
+   {
+      int rowCount = 0;
+
+      if (res.isActive() && res.next())
+      {
+         f(res);
+         ++rowCount;
+      }
+
+      return rowCount;
+   }
+
+   template<typename Func>
+   static int range(QueryResult &res, int start, int count, Func&& f)
+   {
+      Q_ASSERT(start >= 0);
+      Q_ASSERT(count >= 0);
+
+      int rowCount = 0;
+
+      if (res.isActive())
+      {
+         //skip items
+         for (int i = 0; i < start; ++i)
+         {
+            if (!res.next())
+               return rowCount;
+         }
+
+         for (int i = 0; i < count && res.next(); ++i)
+         {
+            f(res);
+            rowCount++;
+         }
+      }
+
+      return rowCount;
+   }
+
+   template<typename Func>
+   static int top(QueryResult &res, int topCount, Func&& f)
+   {
+      return range(res, 0, topCount, f);
+   }
+
+private:
+   Util(){}
+
+};
 
 /*!
 \brief QSqlDatabase wrapper.
@@ -192,6 +264,126 @@ public:
    QSqlDatabase &qSqlDatabase()
    {
       return m_db;
+   }
+
+   /*!
+    \brief Executes <em>query</em> and applies function <em>f</em> to each result row.
+    \param query SQL query string (SELECT statement)
+    \param f Function (lambda) to apply to
+    \returns num rows handled with function <em>f</em>
+
+    \code
+    Database db;
+    db.each("SELECT * FROM table", [](const QueryResult &res)
+    {
+       qDebug() << res.toMap();
+    });
+    \endcode
+    */
+   template<typename Func>
+   int each (const QString &query, Func&& f) const
+   {
+      QueryResult res = execQuery(query);
+
+      return Util::each(res, f);
+   }
+
+   /*!
+    \brief Executes <em>query</em> and applies function <em>f</em> to the first result row.
+    \param query SQL query string (SELECT statement)
+    \param f Function (lambda) to apply to
+    \returns num rows handled with function <em>f</em>
+
+    \code
+    Database db;
+    db.first("SELECT * FROM table", [](const QueryResult &res)
+    {
+       qDebug() << res.toMap();
+    });
+    \endcode
+    */
+   template<typename Func>
+   int first (const QString &query, Func&& f) const
+   {
+      QueryResult res = execQuery(query);
+
+      return Util::first(res, f);
+   }
+
+   /*!
+    \brief Executes <em>query</em> and applies function <em>f</em> to <em>count</em> result rows starting from index <em>start</em>.
+    \param query SQL query string (SELECT statement)
+    \param start Start index
+    \param count Row count to handle
+    \param f Function (lambda) to apply to
+    \returns num rows handled with function <em>f</em>
+
+    \code
+    Database db;
+    db.range("SELECT * FROM table", 3, 10, [](const QueryResult &res)
+    {
+       qDebug() << res.toMap();
+    });
+    \endcode
+    */
+   template<typename Func>
+   int range(const QString &query, int start, int count, Func&& f) const
+   {
+      QueryResult res = execQuery(query);
+
+      return Util::range(res, start, count, f);
+   }
+
+   /*!
+    \brief Executes <em>query</em> and applies function <em>f</em> to <em>topCount</em> result rows.
+    \param query SQL query string (SELECT statement)
+    \param topCount Row count to handle
+    \param f Function (lambda) to apply to
+    \returns num rows handled with function <em>f</em>
+
+    \code
+    Database db;
+    db.top("SELECT * FROM table", 10, [](const QueryResult &res)
+    {
+       qDebug() << res.toMap();
+    });
+    \endcode
+    */
+   template<typename Func>
+   int top(const QString &query, int topCount, Func&& f) const
+   {
+      QueryResult res = execQuery(query);
+
+      return Util::top(res, topCount, f);
+   }
+
+   /*!
+    \brief Executes <em>query</em> and returns scalar value converted to T.
+    \param query SQL query string (SELECT statement)
+    \sa QueryResult::scalar
+    */
+   template<typename T>
+   T scalar(const QString &query) const
+   {
+      QueryResult res = execQuery(query);
+
+      res.next();
+
+      return res.scalar<T>();
+   }
+
+   /*!
+    \brief Executes <em>query</em> and returns scalar value.
+    \param query SQL query string (SELECT statement)
+    \sa QueryResult::scalar
+    */
+   QVariant scalar(const QString &query) const
+   {
+      QueryResult res = execQuery(query);
+
+      res.next();
+
+      return res.scalar();
    }
 
 protected:

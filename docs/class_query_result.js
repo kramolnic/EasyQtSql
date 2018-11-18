@@ -41,6 +41,8 @@ var class_query_result =
     [ "numRowsAffected", "class_query_result.htm#a26baf17cd661ec312918f660ac9e4b1a", null ],
     [ "parseToIntVector", "class_query_result.htm#a22bd0f401bbcc203adb03b874ef2c5d8", null ],
     [ "previous", "class_query_result.htm#a9325bfaca721378e6bafa50fd7839197", null ],
+    [ "scalar", "class_query_result.htm#a5e3b49cb821efecac406606d9e3adb13", null ],
+    [ "scalar", "class_query_result.htm#abd683e71de31fbcf8e74e22249597322", null ],
     [ "seek", "class_query_result.htm#aff65a998f1c8be8c1dd630438a820158", null ],
     [ "size", "class_query_result.htm#ad46ba52de7f43f45c19d4b7eecabca4b", null ],
     [ "toList", "class_query_result.htm#aa1595196bd3fd72c9ee95c6c0a82f711", null ],

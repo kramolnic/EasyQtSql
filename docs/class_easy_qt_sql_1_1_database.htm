@@ -137,6 +137,29 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad4a237ca6acca4068b005d843e1551bb"><td class="memItemLeft" align="right" valign="top">QSqlDatabase &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_easy_qt_sql_1_1_database.htm#ad4a237ca6acca4068b005d843e1551bb">qSqlDatabase</a> ()</td></tr>
 <tr class="memdesc:ad4a237ca6acca4068b005d843e1551bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the wrapped QSqlDatabase object.  <a href="#ad4a237ca6acca4068b005d843e1551bb">More...</a><br /></td></tr>
 <tr class="separator:ad4a237ca6acca4068b005d843e1551bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa14b9309738dd427f7060a88ae193beb"><td class="memTemplParams" colspan="2">template&lt;typename Func &gt; </td></tr>
+<tr class="memitem:aa14b9309738dd427f7060a88ae193beb"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_easy_qt_sql_1_1_database.htm#aa14b9309738dd427f7060a88ae193beb">each</a> (const QString &amp;query, Func &amp;&amp;f) const</td></tr>
+<tr class="memdesc:aa14b9309738dd427f7060a88ae193beb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes <em>query</em> and applies function <em>f</em> to each result row.  <a href="#aa14b9309738dd427f7060a88ae193beb">More...</a><br /></td></tr>
+<tr class="separator:aa14b9309738dd427f7060a88ae193beb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7165d67d4fdfa07b3d9700d5ed5c6a63"><td class="memTemplParams" colspan="2">template&lt;typename Func &gt; </td></tr>
+<tr class="memitem:a7165d67d4fdfa07b3d9700d5ed5c6a63"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_easy_qt_sql_1_1_database.htm#a7165d67d4fdfa07b3d9700d5ed5c6a63">first</a> (const QString &amp;query, Func &amp;&amp;f) const</td></tr>
+<tr class="memdesc:a7165d67d4fdfa07b3d9700d5ed5c6a63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes <em>query</em> and applies function <em>f</em> to the first result row.  <a href="#a7165d67d4fdfa07b3d9700d5ed5c6a63">More...</a><br /></td></tr>
+<tr class="separator:a7165d67d4fdfa07b3d9700d5ed5c6a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1832537434940c8334fe0ca012bee8dd"><td class="memTemplParams" colspan="2">template&lt;typename Func &gt; </td></tr>
+<tr class="memitem:a1832537434940c8334fe0ca012bee8dd"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_easy_qt_sql_1_1_database.htm#a1832537434940c8334fe0ca012bee8dd">range</a> (const QString &amp;query, int start, int count, Func &amp;&amp;f) const</td></tr>
+<tr class="memdesc:a1832537434940c8334fe0ca012bee8dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes <em>query</em> and applies function <em>f</em> to <em>count</em> result rows starting from index <em>start</em>.  <a href="#a1832537434940c8334fe0ca012bee8dd">More...</a><br /></td></tr>
+<tr class="separator:a1832537434940c8334fe0ca012bee8dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f66f508f3cc25d0512d841f938adfb4"><td class="memTemplParams" colspan="2">template&lt;typename Func &gt; </td></tr>
+<tr class="memitem:a2f66f508f3cc25d0512d841f938adfb4"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_easy_qt_sql_1_1_database.htm#a2f66f508f3cc25d0512d841f938adfb4">top</a> (const QString &amp;query, int topCount, Func &amp;&amp;f) const</td></tr>
+<tr class="memdesc:a2f66f508f3cc25d0512d841f938adfb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes <em>query</em> and applies function <em>f</em> to <em>topCount</em> result rows.  <a href="#a2f66f508f3cc25d0512d841f938adfb4">More...</a><br /></td></tr>
+<tr class="separator:a2f66f508f3cc25d0512d841f938adfb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abada64f2593dd9524199f570d9387296"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:abada64f2593dd9524199f570d9387296"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_easy_qt_sql_1_1_database.htm#abada64f2593dd9524199f570d9387296">scalar</a> (const QString &amp;query) const</td></tr>
+<tr class="memdesc:abada64f2593dd9524199f570d9387296"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes <em>query</em> and returns scalar value converted to T.  <a href="#abada64f2593dd9524199f570d9387296">More...</a><br /></td></tr>
+<tr class="separator:abada64f2593dd9524199f570d9387296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa06ecb239cde85058a7ed828e06906b7"><td class="memItemLeft" align="right" valign="top">QVariant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_easy_qt_sql_1_1_database.htm#aa06ecb239cde85058a7ed828e06906b7">scalar</a> (const QString &amp;query) const</td></tr>
+<tr class="memdesc:aa06ecb239cde85058a7ed828e06906b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes <em>query</em> and returns scalar value.  <a href="#aa06ecb239cde85058a7ed828e06906b7">More...</a><br /></td></tr>
+<tr class="separator:aa06ecb239cde85058a7ed828e06906b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -220,6 +243,54 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aa14b9309738dd427f7060a88ae193beb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa14b9309738dd427f7060a88ae193beb">&#9670;&nbsp;</a></span>each()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Func &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EasyQtSql::Database::each </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Func &amp;&amp;&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Executes <em>query</em> and applies function <em>f</em> to each result row. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query</td><td>SQL query string (SELECT statement) </td></tr>
+    <tr><td class="paramname">f</td><td>Function (lambda) to apply to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>num rows handled with function <em>f</em></dd></dl>
+<div class="fragment"><div class="line"><a class="code" href="class_database.htm">Database</a> db;</div><div class="line">db.<a class="code" href="class_database.htm#a7a13f4fc603fb829f123894d9abd6ea7">each</a>(<span class="stringliteral">&quot;SELECT * FROM table&quot;</span>, [](<span class="keyword">const</span> <a class="code" href="class_query_result.htm">QueryResult</a> &amp;res)</div><div class="line">{</div><div class="line">   qDebug() &lt;&lt; res.<a class="code" href="class_query_result.htm#a023bd84f7010368d616d7dbb1b399a06">toMap</a>();</div><div class="line">});</div></div><!-- fragment --> 
+</div>
+</div>
 <a id="abd563e304bb79860237c218b8bc10acd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abd563e304bb79860237c218b8bc10acd">&#9670;&nbsp;</a></span>execNonQuery()</h2>
 
@@ -298,6 +369,54 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
+</div>
+</div>
+<a id="a7165d67d4fdfa07b3d9700d5ed5c6a63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7165d67d4fdfa07b3d9700d5ed5c6a63">&#9670;&nbsp;</a></span>first()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Func &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EasyQtSql::Database::first </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Func &amp;&amp;&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Executes <em>query</em> and applies function <em>f</em> to the first result row. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query</td><td>SQL query string (SELECT statement) </td></tr>
+    <tr><td class="paramname">f</td><td>Function (lambda) to apply to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>num rows handled with function <em>f</em></dd></dl>
+<div class="fragment"><div class="line"><a class="code" href="class_database.htm">Database</a> db;</div><div class="line">db.<a class="code" href="class_database.htm#ad2283c7025501aafc33530d19beb02b4">first</a>(<span class="stringliteral">&quot;SELECT * FROM table&quot;</span>, [](<span class="keyword">const</span> <a class="code" href="class_query_result.htm">QueryResult</a> &amp;res)</div><div class="line">{</div><div class="line">   qDebug() &lt;&lt; res.<a class="code" href="class_query_result.htm#a023bd84f7010368d616d7dbb1b399a06">toMap</a>();</div><div class="line">});</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="a8fc62bc8b97ae861420068e2d1dcff8a"></a>
@@ -431,6 +550,195 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns a reference to the wrapped QSqlDatabase object. </p>
 
+</div>
+</div>
+<a id="a1832537434940c8334fe0ca012bee8dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1832537434940c8334fe0ca012bee8dd">&#9670;&nbsp;</a></span>range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Func &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EasyQtSql::Database::range </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Func &amp;&amp;&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Executes <em>query</em> and applies function <em>f</em> to <em>count</em> result rows starting from index <em>start</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query</td><td>SQL query string (SELECT statement) </td></tr>
+    <tr><td class="paramname">start</td><td>Start index </td></tr>
+    <tr><td class="paramname">count</td><td>Row count to handle </td></tr>
+    <tr><td class="paramname">f</td><td>Function (lambda) to apply to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>num rows handled with function <em>f</em></dd></dl>
+<div class="fragment"><div class="line"><a class="code" href="class_database.htm">Database</a> db;</div><div class="line">db.<a class="code" href="class_database.htm#a3b1fb50c3263775351fc981fda798207">range</a>(<span class="stringliteral">&quot;SELECT * FROM table&quot;</span>, 3, 10, [](<span class="keyword">const</span> <a class="code" href="class_query_result.htm">QueryResult</a> &amp;res)</div><div class="line">{</div><div class="line">   qDebug() &lt;&lt; res.<a class="code" href="class_query_result.htm#a023bd84f7010368d616d7dbb1b399a06">toMap</a>();</div><div class="line">});</div></div><!-- fragment --> 
+</div>
+</div>
+<a id="abada64f2593dd9524199f570d9387296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abada64f2593dd9524199f570d9387296">&#9670;&nbsp;</a></span>scalar() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T EasyQtSql::Database::scalar </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>query</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Executes <em>query</em> and returns scalar value converted to T. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query</td><td>SQL query string (SELECT statement) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_easy_qt_sql_1_1_query_result.htm#a46595f825d0fd0a5c765bc6d301fccb9" title="Returns scalar value converted to type T (the value of the first column of the current row) ...">QueryResult::scalar</a> </dd></dl>
+
+</div>
+</div>
+<a id="aa06ecb239cde85058a7ed828e06906b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa06ecb239cde85058a7ed828e06906b7">&#9670;&nbsp;</a></span>scalar() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVariant EasyQtSql::Database::scalar </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>query</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Executes <em>query</em> and returns scalar value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query</td><td>SQL query string (SELECT statement) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_easy_qt_sql_1_1_query_result.htm#a46595f825d0fd0a5c765bc6d301fccb9" title="Returns scalar value converted to type T (the value of the first column of the current row) ...">QueryResult::scalar</a> </dd></dl>
+
+</div>
+</div>
+<a id="a2f66f508f3cc25d0512d841f938adfb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f66f508f3cc25d0512d841f938adfb4">&#9670;&nbsp;</a></span>top()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Func &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EasyQtSql::Database::top </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>topCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Func &amp;&amp;&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Executes <em>query</em> and applies function <em>f</em> to <em>topCount</em> result rows. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query</td><td>SQL query string (SELECT statement) </td></tr>
+    <tr><td class="paramname">topCount</td><td>Row count to handle </td></tr>
+    <tr><td class="paramname">f</td><td>Function (lambda) to apply to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>num rows handled with function <em>f</em></dd></dl>
+<div class="fragment"><div class="line"><a class="code" href="class_database.htm">Database</a> db;</div><div class="line">db.<a class="code" href="class_database.htm#a91583d42e701fb399563facc3c3c58c0">top</a>(<span class="stringliteral">&quot;SELECT * FROM table&quot;</span>, 10, [](<span class="keyword">const</span> <a class="code" href="class_query_result.htm">QueryResult</a> &amp;res)</div><div class="line">{</div><div class="line">   qDebug() &lt;&lt; res.<a class="code" href="class_query_result.htm#a023bd84f7010368d616d7dbb1b399a06">toMap</a>();</div><div class="line">});</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="ad99ec8b68e916201dce33cda5018be67"></a>

@@ -184,6 +184,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a118e2ac7aa817a6677b71eae61df3801"><td class="memItemLeft" align="right" valign="top">QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_easy_qt_sql_1_1_query_result.htm#a118e2ac7aa817a6677b71eae61df3801">parseToIntVector</a> (int base=10, bool skipNullValues=false) const</td></tr>
 <tr class="memdesc:a118e2ac7aa817a6677b71eae61df3801"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns vector of (optionally parsed) integer values from currently active result row.  <a href="#a118e2ac7aa817a6677b71eae61df3801">More...</a><br /></td></tr>
 <tr class="separator:a118e2ac7aa817a6677b71eae61df3801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46595f825d0fd0a5c765bc6d301fccb9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a46595f825d0fd0a5c765bc6d301fccb9"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_easy_qt_sql_1_1_query_result.htm#a46595f825d0fd0a5c765bc6d301fccb9">scalar</a> () const</td></tr>
+<tr class="memdesc:a46595f825d0fd0a5c765bc6d301fccb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns scalar value converted to type T (the value of the first column of the current row)  <a href="#a46595f825d0fd0a5c765bc6d301fccb9">More...</a><br /></td></tr>
+<tr class="separator:a46595f825d0fd0a5c765bc6d301fccb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa859ae4f8e2093494f8b2849d6f4f842"><td class="memItemLeft" align="right" valign="top">QVariant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_easy_qt_sql_1_1_query_result.htm#aa859ae4f8e2093494f8b2849d6f4f842">scalar</a> () const</td></tr>
+<tr class="memdesc:aa859ae4f8e2093494f8b2849d6f4f842"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns scalar value (the value of the first column of the current row)  <a href="#aa859ae4f8e2093494f8b2849d6f4f842">More...</a><br /></td></tr>
+<tr class="separator:aa859ae4f8e2093494f8b2849d6f4f842"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0dac0809b8eab8f066106391346dfb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_easy_qt_sql_1_1_query_result.htm#ab0dac0809b8eab8f066106391346dfb4">fetchVars</a> (int &amp;<a class="el" href="class_easy_qt_sql_1_1_query_result.htm#a72fe9d306b5866c15f99a3a413d9ec16">value</a>) const</td></tr>
 <tr class="memdesc:ab0dac0809b8eab8f066106391346dfb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns a variable the value from the current record.  <a href="#ab0dac0809b8eab8f066106391346dfb4">More...</a><br /></td></tr>
 <tr class="separator:ab0dac0809b8eab8f066106391346dfb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1596,6 +1603,62 @@ template&lt;typename... Rest&gt; </div>
 
 <p>Retrieves the previous record in the result, if available, and positions the query on the retrieved record. </p>
 <p>Wrapper over QSqlQuery::previous() </p>
+
+</div>
+</div>
+<a id="a46595f825d0fd0a5c765bc6d301fccb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46595f825d0fd0a5c765bc6d301fccb9">&#9670;&nbsp;</a></span>scalar() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T EasyQtSql::QueryResult::scalar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns scalar value converted to type T (the value of the first column of the current row) </p>
+
+</div>
+</div>
+<a id="aa859ae4f8e2093494f8b2849d6f4f842"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa859ae4f8e2093494f8b2849d6f4f842">&#9670;&nbsp;</a></span>scalar() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVariant EasyQtSql::QueryResult::scalar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns scalar value (the value of the first column of the current row) </p>
 
 </div>
 </div>

@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
    {
       Transaction t(sdb);
 
+
       t.execNonQuery("CREATE TEMP TABLE IF NOT EXISTS table1 (a int, b int, c int, d text)");
 
       //multi insert
@@ -37,6 +38,23 @@ int main(int argc, char *argv[])
       //delete with constant condition
       //t.deleteFrom("table1").where("1=0");
       PreparedQuery query = t.prepare("SELECT a, b, c, d FROM table1 WHERE a = ? AND b = ?");
+
+      t.first("SELECT 1", [](const QueryResult &row){
+         qDebug() << row.scalar<bool>() << row.scalar<QDate>();
+      });
+
+      t.each("SELECT * FROM table1", [](const QueryResult &row){
+         qDebug() << row.toMap();
+      });
+
+      Util::each(query.exec(1, 2), [](const QueryResult &row){
+         qDebug() << row.toMap();
+      });
+
+      int i = t.scalar<int>("SELECT 1");
+      int j = t.scalar("SELECT 1").toInt();
+
+      qDebug() << i << j;
 
       QueryResult res = query.exec(1, 2);
 

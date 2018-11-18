@@ -60,20 +60,6 @@ public:
    }
 
    template<typename Func>
-   static int first(QueryResult &res, Func&& f)
-   {
-      int rowCount = 0;
-
-      if (res.isActive() && res.next())
-      {
-         f(res);
-         ++rowCount;
-      }
-
-      return rowCount;
-   }
-
-   template<typename Func>
    static int range(QueryResult &res, int start, int count, Func&& f)
    {
       Q_ASSERT(start >= 0);
@@ -104,6 +90,12 @@ public:
    static int top(QueryResult &res, int topCount, Func&& f)
    {
       return range(res, 0, topCount, f);
+   }
+
+   template<typename Func>
+   static int first(QueryResult &res, Func&& f)
+   {
+      return top(res, 1, f);
    }
 
 private:

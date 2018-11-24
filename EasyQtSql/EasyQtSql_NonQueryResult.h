@@ -104,7 +104,7 @@ public:
    }
 
 private:
-   NonQueryResult(const QSqlQuery &q)
+   explicit NonQueryResult(const QSqlQuery &q)
     : m_query(q)
    { }
 

@@ -846,7 +846,7 @@ private:
    QueryResult()
    { }
 
-   QueryResult(const QSqlQuery &query)
+   explicit QueryResult(const QSqlQuery &query)
     : m_query(query)
    { }
 

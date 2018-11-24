@@ -140,7 +140,7 @@ public:
     *
     * \throws DBException
     */
-   Database (const QSqlDatabase &db = QSqlDatabase())
+   explicit Database (const QSqlDatabase &db = QSqlDatabase())
    {
       m_db = db.isValid() ? db : QSqlDatabase::database();
 
@@ -448,7 +448,7 @@ class  Transaction : public Database
 
 public:
 
-   Transaction (const QSqlDatabase &db = QSqlDatabase())
+   explicit Transaction (const QSqlDatabase &db = QSqlDatabase())
      : Database(db)
      , m_commited(false)
      , m_started(false)

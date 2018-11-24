@@ -75,7 +75,7 @@ struct  In : public ParamDirectionWrapper
  */
 struct  Out : public ParamDirectionWrapper
 {
-   Out(const QString &alias)
+   explicit Out(const QString &alias)
     : ParamDirectionWrapper(QVariant(), alias)
    { }
 

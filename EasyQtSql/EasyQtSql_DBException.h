@@ -49,12 +49,12 @@ public:
    const QString   lastQuery;
 
 private:
-   DBException (const QSqlQuery &q)
+   explicit DBException (const QSqlQuery &q)
     : lastError(q.lastError())
     , lastQuery(q.lastQuery())
    { }
 
-   DBException (const QSqlDatabase &db)
+   explicit DBException (const QSqlDatabase &db)
     : lastError(db.lastError())
    { }
 };

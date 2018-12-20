@@ -18,7 +18,8 @@ HEADERS += \
     EasyQtSql_DeleteQuery.h \
     EasyQtSql_PreparedQuery.h \
     EasyQtSql_ParamDirectionWrapper.h \
-    EasyQtSql_UpdateQuery.h
+    EasyQtSql_UpdateQuery.h \
+    EasyQtSql_SqlFactory.h
 
 DISTFILES += \
     EasyQtSql.pri

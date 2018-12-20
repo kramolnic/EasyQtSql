@@ -10,13 +10,13 @@ int main(int argc, char *argv[])
 
    qDebug() << "begin";
 
-   QSqlDatabase sdb = QSqlDatabase::addDatabase("QSQLITE");
-   sdb.setDatabaseName(":memory:");
+   SqlFactory *factory = SqlFactory::getInstance()->config(SqlFactory::DBSetting::sqliteInmemory());
+
+   QSqlDatabase sdb = factory->getDatabase();
 
    try
    {
       Transaction t(sdb);
-
 
       t.execNonQuery("CREATE TEMP TABLE IF NOT EXISTS table1 (a int, b int, c int, d text)");
 

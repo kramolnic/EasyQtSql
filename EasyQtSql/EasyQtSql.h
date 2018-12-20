@@ -58,6 +58,9 @@ namespace EasyQtSql
 #define EASY_QT_SQL_MAIN
 /// \endcond
 
+//SqlFactory (DB connection manager)
+#include "EasyQtSql_SqlFactory.h"
+
 //Generic classes
 #include "EasyQtSql_DBException.h"
 #include "EasyQtSql_ParamDirectionWrapper.h"

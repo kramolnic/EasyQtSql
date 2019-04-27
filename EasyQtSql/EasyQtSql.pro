@@ -19,7 +19,8 @@ HEADERS += \
     EasyQtSql_PreparedQuery.h \
     EasyQtSql_ParamDirectionWrapper.h \
     EasyQtSql_UpdateQuery.h \
-    EasyQtSql_SqlFactory.h
+    EasyQtSql_SqlFactory.h \
+    EasyQtSql_Util.h
 
 DISTFILES += \
     EasyQtSql.pri

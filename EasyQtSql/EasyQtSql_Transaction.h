@@ -35,73 +35,9 @@
 #include "EasyQtSql_DeleteQuery.h"
 #include "EasyQtSql_UpdateQuery.h"
 #include "EasyQtSql_PreparedQuery.h"
+#include "EasyQtSql_Util.h"
 
 #endif
-
-class Util
-{
-public:
-
-   template<typename Func>
-   static int each(QueryResult &res, Func&& f)
-   {
-      int rowCount = 0;
-
-      if (res.isActive())
-      {
-         while (res.next())
-         {
-            f(res);
-            ++rowCount;
-         }
-      }
-
-      return rowCount;
-   }
-
-   template<typename Func>
-   static int range(QueryResult &res, int start, int count, Func&& f)
-   {
-      Q_ASSERT(start >= 0);
-      Q_ASSERT(count >= 0);
-
-      int rowCount = 0;
-
-      if (res.isActive())
-      {
-         //skip items
-         for (int i = 0; i < start; ++i)
-         {
-            if (!res.next())
-               return rowCount;
-         }
-
-         for (int i = 0; i < count && res.next(); ++i)
-         {
-            f(res);
-            rowCount++;
-         }
-      }
-
-      return rowCount;
-   }
-
-   template<typename Func>
-   static int top(QueryResult &res, int topCount, Func&& f)
-   {
-      return range(res, 0, topCount, f);
-   }
-
-   template<typename Func>
-   static int first(QueryResult &res, Func&& f)
-   {
-      return top(res, 1, f);
-   }
-
-private:
-   Util(){}
-
-};
 
 /*!
 \brief QSqlDatabase wrapper.

@@ -78,6 +78,9 @@ namespace EasyQtSql
 //Transaction helper
 #include "EasyQtSql_Transaction.h"
 
+//Utils
+#include "EasyQtSql_Util.h"
+
 #undef EASY_QT_SQL_MAIN
 
 }

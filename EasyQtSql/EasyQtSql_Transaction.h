@@ -91,6 +91,22 @@ public:
       }
    }
 
+   Database(Database&& other)
+   {
+      m_db = other.m_db;
+      other.m_db = QSqlDatabase();
+   }
+
+   Database& operator=(Database&& other)
+   {
+      if (this == &other) return *this;
+
+      m_db = other.m_db;
+      other.m_db = QSqlDatabase();
+
+      return *this;
+   }
+
    /*!
     * \brief Returns information about the last error that occurred on the underlying database.
     */
@@ -399,9 +415,30 @@ public:
       #endif
    }
 
+   Transaction (Transaction&& other)
+      : Database(std::move(other))
+   {
+      m_commited = other.m_commited;
+      m_started  = other.m_started;
+
+      other.m_commited = false;
+      other.m_started  = false;
+   }
+
+   Transaction& operator=(Transaction&& other)
+   {
+      m_started  = other.m_started;
+      m_commited = other.m_commited;
+
+      other.m_commited = false;
+      other.m_started  = false;
+
+      return static_cast<Transaction&>(Database::operator=(std::move(other)));
+   }
+
    ~Transaction()
    {
-      if (!m_commited)
+      if (m_db.isValid() && !m_commited)
       {
          m_db.rollback();
       }
@@ -416,7 +453,7 @@ public:
    */
    bool commit()
    {
-      if (!m_commited)
+      if (m_db.isValid() && !m_commited)
       {
          m_commited = m_db.commit();
 
@@ -439,7 +476,7 @@ public:
    {
       bool res = false;
 
-      if (!m_commited)
+      if (m_db.isValid() && !m_commited)
       {
          res = m_db.rollback();
 
@@ -467,7 +504,7 @@ public:
 
 private:   
    bool m_commited = false;
-   bool m_started = false;
+   bool m_started = false;   
 };
 
 #endif // EASYQTSQL_TRANSACTION_H

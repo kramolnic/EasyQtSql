@@ -28,7 +28,7 @@
 
 #ifndef EASY_QT_SQL_MAIN
 
-#include "EasyQtSql_PreparedQuery.h"
+#include "EasyQtSql_QueryResult.h"
 
 #endif
 

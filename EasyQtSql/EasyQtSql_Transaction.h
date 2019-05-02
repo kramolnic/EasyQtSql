@@ -35,9 +35,10 @@
 #include "EasyQtSql_DeleteQuery.h"
 #include "EasyQtSql_UpdateQuery.h"
 #include "EasyQtSql_PreparedQuery.h"
-#include "EasyQtSql_Util.h"
 
 #endif
+
+#include "EasyQtSql_Util.h"
 
 /*!
 \brief QSqlDatabase wrapper.

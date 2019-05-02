@@ -8,6 +8,8 @@ var searchData=
   ['easyqtsql_5fparamdirectionwrapper_2eh',['EasyQtSql_ParamDirectionWrapper.h',['../_easy_qt_sql___param_direction_wrapper_8h.htm',1,'']]],
   ['easyqtsql_5fpreparedquery_2eh',['EasyQtSql_PreparedQuery.h',['../_easy_qt_sql___prepared_query_8h.htm',1,'']]],
   ['easyqtsql_5fqueryresult_2eh',['EasyQtSql_QueryResult.h',['../_easy_qt_sql___query_result_8h.htm',1,'']]],
+  ['easyqtsql_5fsqlfactory_2eh',['EasyQtSql_SqlFactory.h',['../_easy_qt_sql___sql_factory_8h.htm',1,'']]],
   ['easyqtsql_5ftransaction_2eh',['EasyQtSql_Transaction.h',['../_easy_qt_sql___transaction_8h.htm',1,'']]],
-  ['easyqtsql_5fupdatequery_2eh',['EasyQtSql_UpdateQuery.h',['../_easy_qt_sql___update_query_8h.htm',1,'']]]
+  ['easyqtsql_5fupdatequery_2eh',['EasyQtSql_UpdateQuery.h',['../_easy_qt_sql___update_query_8h.htm',1,'']]],
+  ['easyqtsql_5futil_2eh',['EasyQtSql_Util.h',['../_easy_qt_sql___util_8h.htm',1,'']]]
 ];

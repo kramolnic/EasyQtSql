@@ -12,6 +12,7 @@ var annotated_dup =
     [ "ParamDirectionWrapper", "struct_param_direction_wrapper.htm", "struct_param_direction_wrapper" ],
     [ "PreparedQuery", "class_prepared_query.htm", "class_prepared_query" ],
     [ "QueryResult", "class_query_result.htm", "class_query_result" ],
+    [ "SqlFactory", "class_sql_factory.htm", "class_sql_factory" ],
     [ "Transaction", "class_transaction.htm", "class_transaction" ],
     [ "UpdateQuery", "class_update_query.htm", "class_update_query" ],
     [ "Util", "class_util.htm", null ]

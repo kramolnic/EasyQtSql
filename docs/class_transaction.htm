@@ -112,6 +112,10 @@ Inheritance diagram for Transaction:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9fed08d5643b66471a6e9fc75f351117"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transaction.htm#a9fed08d5643b66471a6e9fc75f351117">Transaction</a> (const QSqlDatabase &amp;db=QSqlDatabase())</td></tr>
 <tr class="separator:a9fed08d5643b66471a6e9fc75f351117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25916a5c0268d3b24a1fe17acf49fd95"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transaction.htm#a25916a5c0268d3b24a1fe17acf49fd95">Transaction</a> (<a class="el" href="class_transaction.htm">Transaction</a> &amp;&amp;other)</td></tr>
+<tr class="separator:a25916a5c0268d3b24a1fe17acf49fd95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a384204be2d6c76f7f6d20d612f487e71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_transaction.htm">Transaction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transaction.htm#a384204be2d6c76f7f6d20d612f487e71">operator=</a> (<a class="el" href="class_transaction.htm">Transaction</a> &amp;&amp;other)</td></tr>
+<tr class="separator:a384204be2d6c76f7f6d20d612f487e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a362b0d2524d0c799165190517192dca9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transaction.htm#a362b0d2524d0c799165190517192dca9">~Transaction</a> ()</td></tr>
 <tr class="separator:a362b0d2524d0c799165190517192dca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7388031cba0416d48e03e3f7acd5ca6a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transaction.htm#a7388031cba0416d48e03e3f7acd5ca6a">commit</a> ()</td></tr>
@@ -129,6 +133,10 @@ Public Member Functions</h2></td></tr>
 <tr class="inherit_header pub_methods_class_database"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_database')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_database.htm">Database</a></td></tr>
 <tr class="memitem:a252b2bb8aeb0c0a2509b0eddf0be3c4e inherit pub_methods_class_database"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_database.htm#a252b2bb8aeb0c0a2509b0eddf0be3c4e">Database</a> (const QSqlDatabase &amp;db=QSqlDatabase())</td></tr>
 <tr class="separator:a252b2bb8aeb0c0a2509b0eddf0be3c4e inherit pub_methods_class_database"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe82d7c8e0e895c0b4f9fa08b4e3eb8e inherit pub_methods_class_database"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_database.htm#afe82d7c8e0e895c0b4f9fa08b4e3eb8e">Database</a> (<a class="el" href="class_database.htm">Database</a> &amp;&amp;other)</td></tr>
+<tr class="separator:afe82d7c8e0e895c0b4f9fa08b4e3eb8e inherit pub_methods_class_database"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a81e06933bf2ef5be2e59030a7e1e1c inherit pub_methods_class_database"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_database.htm">Database</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_database.htm#a2a81e06933bf2ef5be2e59030a7e1e1c">operator=</a> (<a class="el" href="class_database.htm">Database</a> &amp;&amp;other)</td></tr>
+<tr class="separator:a2a81e06933bf2ef5be2e59030a7e1e1c inherit pub_methods_class_database"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bc0ce48d3711002d4e0490c826f7b5e inherit pub_methods_class_database"><td class="memItemLeft" align="right" valign="top">QSqlError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_database.htm#a7bc0ce48d3711002d4e0490c826f7b5e">lastError</a> () const</td></tr>
 <tr class="memdesc:a7bc0ce48d3711002d4e0490c826f7b5e inherit pub_methods_class_database"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns information about the last error that occurred on the underlying database.  <a href="class_database.htm#a7bc0ce48d3711002d4e0490c826f7b5e">More...</a><br /></td></tr>
 <tr class="separator:a7bc0ce48d3711002d4e0490c826f7b5e inherit pub_methods_class_database"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,7 +199,7 @@ Additional Inherited Members</h2></td></tr>
 </ul>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> test()</div><div class="line">{</div><div class="line">   QSqlDatabase db = QSqlDatabase::addDatabase(<span class="stringliteral">&quot;QSQLITE&quot;</span>);</div><div class="line">   db.setDatabaseName(<span class="stringliteral">&quot;:memory:&quot;</span>);</div><div class="line">   db.open();</div><div class="line"></div><div class="line">   <span class="keywordflow">try</span></div><div class="line">   {</div><div class="line">      <a class="code" href="class_transaction.htm">Transaction</a> t(db);</div><div class="line"></div><div class="line">      t.<a class="code" href="class_database.htm#aae9f7e53275334c91655eeb7a2bde030">execNonQuery</a>(<span class="stringliteral">&quot;CREATE TABLE table (a int, b int, c int, d text)&quot;</span>);</div><div class="line"></div><div class="line">      t.<a class="code" href="class_database.htm#a8388689590c1f3adeabd2972b221bcb2">insertInto</a>(<span class="stringliteral">&quot;table (a, b, c, d)&quot;</span>)</div><div class="line">         .<a class="code" href="class_insert_query.htm#ae207fa97fdf9571fbcded31bbad9b9ed">values</a>(1, 2, 3, <span class="stringliteral">&quot;row1&quot;</span>)</div><div class="line">         .<a class="code" href="class_insert_query.htm#ae207fa97fdf9571fbcded31bbad9b9ed">values</a>(4, 5, 6, <span class="stringliteral">&quot;row2&quot;</span>)</div><div class="line">         .<a class="code" href="class_insert_query.htm#ae207fa97fdf9571fbcded31bbad9b9ed">values</a>(7, 8, 9, <span class="stringliteral">&quot;row3&quot;</span>)</div><div class="line">         .<a class="code" href="class_insert_query.htm#a385c674dfad02ee62cfc0d3e124cd33b">exec</a>();</div><div class="line"></div><div class="line">      <a class="code" href="class_prepared_query.htm">PreparedQuery</a> query = t.<a class="code" href="class_database.htm#a03e2c9113452bb52bb7018ef2366bce1">prepare</a>(<span class="stringliteral">&quot;SELECT a, b, c, d FROM table&quot;</span>);</div><div class="line"></div><div class="line">      <a class="code" href="class_query_result.htm">QueryResult</a> res = query.<a class="code" href="class_prepared_query.htm#a1013aea1638d6d04868ce39130bc1b67">exec</a>();</div><div class="line">      <span class="keywordflow">while</span> (res.<a class="code" href="class_query_result.htm#a1c756382c20c126979b28715d529c054">next</a>())</div><div class="line">      {</div><div class="line">         QVariantMap map = res.<a class="code" href="class_query_result.htm#a023bd84f7010368d616d7dbb1b399a06">toMap</a>();</div><div class="line">         qDebug() &lt;&lt; map;</div><div class="line">      }</div><div class="line"></div><div class="line">      t.<a class="code" href="class_database.htm#a2d8dad3df4134306749582216bd437e0">update</a>(<span class="stringliteral">&quot;table&quot;</span>)</div><div class="line">         .<a class="code" href="class_update_query.htm#a7c1b4eaa45048ec8a3f6f7d4223f5ace">set</a>(<span class="stringliteral">&quot;a&quot;</span>, 111)</div><div class="line">         .<a class="code" href="class_update_query.htm#a7c1b4eaa45048ec8a3f6f7d4223f5ace">set</a>(<span class="stringliteral">&quot;b&quot;</span>, 222)</div><div class="line">         .<a class="code" href="class_update_query.htm#abb4c7b7502599a78699e3a1f4cb4cbda">where</a>(<span class="stringliteral">&quot;c = ? OR c = ?&quot;</span>, 3, 6);</div><div class="line"></div><div class="line">      res = query.<a class="code" href="class_prepared_query.htm#a1013aea1638d6d04868ce39130bc1b67">exec</a>();</div><div class="line">      <span class="keywordflow">while</span> (res.<a class="code" href="class_query_result.htm#a1c756382c20c126979b28715d529c054">next</a>())</div><div class="line">      {</div><div class="line">         QVariantMap map = res.<a class="code" href="class_query_result.htm#a023bd84f7010368d616d7dbb1b399a06">toMap</a>();</div><div class="line">         qDebug() &lt;&lt; map;</div><div class="line">      }</div><div class="line"></div><div class="line">      t.<a class="code" href="class_transaction.htm#a7388031cba0416d48e03e3f7acd5ca6a">commit</a>(); <span class="comment">//the transaction will be rolled back on exit from the scope (when calling the destructor) if you do not explicitly commit</span></div><div class="line"></div><div class="line">   <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code" href="class_d_b_exception.htm">DBException</a> &amp;e)</div><div class="line">   {</div><div class="line">      <span class="comment">//you can handle all the errors at one point</span></div><div class="line">      <span class="comment">//the transaction will be automatically rolled back on exception</span></div><div class="line"></div><div class="line">      qDebug() &lt;&lt; e.<a class="code" href="class_d_b_exception.htm#adf142ded3fb236826a5a6ba4a606e584">lastError</a> &lt;&lt; e.<a class="code" href="class_d_b_exception.htm#a3ec8b4b593abee155554472ae0b58f12">lastQuery</a>;</div><div class="line">   }</div><div class="line">}</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9fed08d5643b66471a6e9fc75f351117"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fed08d5643b66471a6e9fc75f351117">&#9670;&nbsp;</a></span>Transaction()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fed08d5643b66471a6e9fc75f351117">&#9670;&nbsp;</a></span>Transaction() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -204,6 +212,32 @@ Additional Inherited Members</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const QSqlDatabase &amp;&#160;</td>
           <td class="paramname"><em>db</em> = <code>QSqlDatabase()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a25916a5c0268d3b24a1fe17acf49fd95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25916a5c0268d3b24a1fe17acf49fd95">&#9670;&nbsp;</a></span>Transaction() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transaction::Transaction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_transaction.htm">Transaction</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -300,6 +334,32 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns true if the transaction has been commited successfully. Otherwise it returns false. </p>
+
+</div>
+</div>
+<a id="a384204be2d6c76f7f6d20d612f487e71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a384204be2d6c76f7f6d20d612f487e71">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_transaction.htm">Transaction</a>&amp; Transaction::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_transaction.htm">Transaction</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

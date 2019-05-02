@@ -681,8 +681,7 @@ public:
 
    \endcode
 
-   \param metaobject staticMetaObject field from Q_GADGET object
-   \param gadget Q_GADGET object pointer.
+   \param object Q_OBJECT object reference
    */
    void fetchObject(QObject &object) const
    {
@@ -747,18 +746,18 @@ public:
          Row testRow;
 
          //fetch testRow from current result row, properties a, b, c, d will be filled here:
-         res.fetchGadget(testRow.staticMetaObject, &testRow);
+         res.fetchGadget(testRow);
       }
    }
 
    \endcode
 
-   \param metaobject staticMetaObject field from Q_GADGET object
-   \param gadget Q_GADGET object pointer.
+   \param gadget Q_GADGET reference
    */
-   void fetchGadget(const QMetaObject &metaobject, void *gadget)
+   template<typename T>
+   void fetchGadget(T &gadget) const
    {
-      Q_ASSERT(gadget != nullptr);
+      const QMetaObject &metaobject = gadget.staticMetaObject;
 
       const int count = metaobject.propertyCount();
 
@@ -774,7 +773,7 @@ public:
 
             if (map.contains(sName))
             {
-               metaproperty.writeOnGadget(gadget, map.value(sName));
+               metaproperty.writeOnGadget(&gadget, map.value(sName));
             }
          }
       }

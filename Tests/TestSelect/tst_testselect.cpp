@@ -395,7 +395,7 @@ void TestSelect::test_case12() //fetch rows
    while (res.next())
    {
       Row testRow;
-      res.fetchGadget(testRow.staticMetaObject, &testRow);
+      res.fetchGadget(testRow);
 
       const Row &row = rows[i];
 

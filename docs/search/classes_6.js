@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['transaction',['Transaction',['../class_transaction.htm',1,'Transaction'],['../class_easy_qt_sql_1_1_transaction.htm',1,'EasyQtSql::Transaction']]]
+  ['sqlfactory',['SqlFactory',['../class_sql_factory.htm',1,'SqlFactory'],['../class_easy_qt_sql_1_1_sql_factory.htm',1,'EasyQtSql::SqlFactory']]]
 ];

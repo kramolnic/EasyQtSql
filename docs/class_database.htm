@@ -113,6 +113,10 @@ Inheritance diagram for Database:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a252b2bb8aeb0c0a2509b0eddf0be3c4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_database.htm#a252b2bb8aeb0c0a2509b0eddf0be3c4e">Database</a> (const QSqlDatabase &amp;db=QSqlDatabase())</td></tr>
 <tr class="separator:a252b2bb8aeb0c0a2509b0eddf0be3c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe82d7c8e0e895c0b4f9fa08b4e3eb8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_database.htm#afe82d7c8e0e895c0b4f9fa08b4e3eb8e">Database</a> (<a class="el" href="class_database.htm">Database</a> &amp;&amp;other)</td></tr>
+<tr class="separator:afe82d7c8e0e895c0b4f9fa08b4e3eb8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a81e06933bf2ef5be2e59030a7e1e1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_database.htm">Database</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_database.htm#a2a81e06933bf2ef5be2e59030a7e1e1c">operator=</a> (<a class="el" href="class_database.htm">Database</a> &amp;&amp;other)</td></tr>
+<tr class="separator:a2a81e06933bf2ef5be2e59030a7e1e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bc0ce48d3711002d4e0490c826f7b5e"><td class="memItemLeft" align="right" valign="top">QSqlError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_database.htm#a7bc0ce48d3711002d4e0490c826f7b5e">lastError</a> () const</td></tr>
 <tr class="memdesc:a7bc0ce48d3711002d4e0490c826f7b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns information about the last error that occurred on the underlying database.  <a href="#a7bc0ce48d3711002d4e0490c826f7b5e">More...</a><br /></td></tr>
 <tr class="separator:a7bc0ce48d3711002d4e0490c826f7b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,7 +174,7 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><p>QSqlDatabase wrapper. </p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> test()</div><div class="line">{</div><div class="line">   QSqlDatabase db = QSqlDatabase::addDatabase(<span class="stringliteral">&quot;QSQLITE&quot;</span>);</div><div class="line">   db.setDatabaseName(<span class="stringliteral">&quot;:memory:&quot;</span>);</div><div class="line"></div><div class="line">   <span class="keywordflow">try</span></div><div class="line">   {</div><div class="line">      <a class="code" href="class_database.htm">Database</a> sdb(db);</div><div class="line"></div><div class="line">      sdb.execNonQuery(<span class="stringliteral">&quot;CREATE TABLE table (a int, b int, c int, d text)&quot;</span>);</div><div class="line">   }</div><div class="line">   <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code" href="class_d_b_exception.htm">DBException</a> &amp;e)</div><div class="line">   {</div><div class="line">      <span class="comment">//you can handle all the errors at one point</span></div><div class="line"></div><div class="line">      qDebug() &lt;&lt; e.<a class="code" href="class_d_b_exception.htm#adf142ded3fb236826a5a6ba4a606e584">lastError</a> &lt;&lt; e.<a class="code" href="class_d_b_exception.htm#a3ec8b4b593abee155554472ae0b58f12">lastQuery</a>;</div><div class="line">   }</div><div class="line">}</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a252b2bb8aeb0c0a2509b0eddf0be3c4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a252b2bb8aeb0c0a2509b0eddf0be3c4e">&#9670;&nbsp;</a></span>Database()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a252b2bb8aeb0c0a2509b0eddf0be3c4e">&#9670;&nbsp;</a></span>Database() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,7 +192,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -205,6 +209,32 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="afe82d7c8e0e895c0b4f9fa08b4e3eb8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe82d7c8e0e895c0b4f9fa08b4e3eb8e">&#9670;&nbsp;</a></span>Database() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Database::Database </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_database.htm">Database</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -477,6 +507,32 @@ template&lt;typename Func &gt; </div>
 </div><div class="memdoc">
 
 <p>Returns information about the last error that occurred on the underlying database. </p>
+
+</div>
+</div>
+<a id="a2a81e06933bf2ef5be2e59030a7e1e1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a81e06933bf2ef5be2e59030a7e1e1c">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_database.htm">Database</a>&amp; Database::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_database.htm">Database</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

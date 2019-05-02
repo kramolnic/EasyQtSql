@@ -1,5 +1,8 @@
 var _easy_qt_sql_8h =
 [
+    [ "SqlFactory", "class_easy_qt_sql_1_1_sql_factory.htm", "class_easy_qt_sql_1_1_sql_factory" ],
+    [ "DBSetting", "struct_easy_qt_sql_1_1_sql_factory_1_1_d_b_setting.htm", "struct_easy_qt_sql_1_1_sql_factory_1_1_d_b_setting" ],
+    [ "ThreadDBPool", "class_easy_qt_sql_1_1_sql_factory_1_1_thread_d_b_pool.htm", "class_easy_qt_sql_1_1_sql_factory_1_1_thread_d_b_pool" ],
     [ "DBException", "class_easy_qt_sql_1_1_d_b_exception.htm", "class_easy_qt_sql_1_1_d_b_exception" ],
     [ "ParamDirectionWrapper", "struct_easy_qt_sql_1_1_param_direction_wrapper.htm", "struct_easy_qt_sql_1_1_param_direction_wrapper" ],
     [ "In", "struct_easy_qt_sql_1_1_in.htm", "struct_easy_qt_sql_1_1_in" ],

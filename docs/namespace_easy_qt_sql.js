@@ -11,6 +11,7 @@ var namespace_easy_qt_sql =
     [ "ParamDirectionWrapper", "struct_easy_qt_sql_1_1_param_direction_wrapper.htm", "struct_easy_qt_sql_1_1_param_direction_wrapper" ],
     [ "PreparedQuery", "class_easy_qt_sql_1_1_prepared_query.htm", "class_easy_qt_sql_1_1_prepared_query" ],
     [ "QueryResult", "class_easy_qt_sql_1_1_query_result.htm", "class_easy_qt_sql_1_1_query_result" ],
+    [ "SqlFactory", "class_easy_qt_sql_1_1_sql_factory.htm", "class_easy_qt_sql_1_1_sql_factory" ],
     [ "Transaction", "class_easy_qt_sql_1_1_transaction.htm", "class_easy_qt_sql_1_1_transaction" ],
     [ "UpdateQuery", "class_easy_qt_sql_1_1_update_query.htm", "class_easy_qt_sql_1_1_update_query" ],
     [ "Util", "class_easy_qt_sql_1_1_util.htm", null ]

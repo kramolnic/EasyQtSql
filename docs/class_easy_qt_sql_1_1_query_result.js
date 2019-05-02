@@ -5,7 +5,7 @@ var class_easy_qt_sql_1_1_query_result =
     [ "boundValue", "class_easy_qt_sql_1_1_query_result.htm#a4d619dd817888bc9179a7a37a3a6a515", null ],
     [ "boundValues", "class_easy_qt_sql_1_1_query_result.htm#ae45b225a9a7d64f9d151bc21c353275f", null ],
     [ "executedQuery", "class_easy_qt_sql_1_1_query_result.htm#abe5f540e13e57385fc57c8826b61816e", null ],
-    [ "fetchGadget", "class_easy_qt_sql_1_1_query_result.htm#a3730e9e2083f02a208e85a198c145d7c", null ],
+    [ "fetchGadget", "class_easy_qt_sql_1_1_query_result.htm#aaece06902097ce3275792c3b33c6dc2d", null ],
     [ "fetchList", "class_easy_qt_sql_1_1_query_result.htm#a3aaa9b4e9c45e0a5c303f916c7ecee64", null ],
     [ "fetchMap", "class_easy_qt_sql_1_1_query_result.htm#aaf2dee4a21aed3b495ffc56de32a3fe0", null ],
     [ "fetchObject", "class_easy_qt_sql_1_1_query_result.htm#a043b284c72b54c4a2871867196a67560", null ],

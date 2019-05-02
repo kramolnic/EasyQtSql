@@ -46,6 +46,7 @@ var NAVTREE =
         [ "All", "functions.htm", "functions_dup" ],
         [ "Functions", "functions_func.htm", "functions_func" ],
         [ "Variables", "functions_vars.htm", null ],
+        [ "Typedefs", "functions_type.htm", null ],
         [ "Related Functions", "functions_rela.htm", null ]
       ] ]
     ] ],
@@ -63,7 +64,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_easy_qt_sql_8h.htm",
-"class_query_result.htm#a8c17bed4e4380137912a2baba19e5a30"
+"class_query_result.htm#a0e5a5d108da1d03b0f624e18330a10f5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

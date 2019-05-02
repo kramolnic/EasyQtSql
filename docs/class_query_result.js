@@ -5,7 +5,7 @@ var class_query_result =
     [ "boundValue", "class_query_result.htm#a9e9ea76bfa4a3770e0ea885c797b5729", null ],
     [ "boundValues", "class_query_result.htm#a540f4948af295e336c58a6fe30e48c0b", null ],
     [ "executedQuery", "class_query_result.htm#abfc27e5ad56a2da113bdb804b3fd682c", null ],
-    [ "fetchGadget", "class_query_result.htm#af8769dd2d6e77b2f669ce206e283464a", null ],
+    [ "fetchGadget", "class_query_result.htm#a53a94d8a3a9ca6916716d79b5fb48837", null ],
     [ "fetchList", "class_query_result.htm#af62abbe3a59c25163c90e4a5fec632c7", null ],
     [ "fetchMap", "class_query_result.htm#a0f79c838a9fcd4a5d48e61abc79612e9", null ],
     [ "fetchObject", "class_query_result.htm#a79a40fde15ca3ceaa4f0c7b8ba649558", null ],

@@ -113,6 +113,10 @@ Inheritance diagram for EasyQtSql::Database:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a456e50298d0dd2bb89ddbadee7bf2da5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_easy_qt_sql_1_1_database.htm#a456e50298d0dd2bb89ddbadee7bf2da5">Database</a> (const QSqlDatabase &amp;db=QSqlDatabase())</td></tr>
 <tr class="separator:a456e50298d0dd2bb89ddbadee7bf2da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ba16ffeda09410df95720f2f7e9d872"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_easy_qt_sql_1_1_database.htm#a4ba16ffeda09410df95720f2f7e9d872">Database</a> (<a class="el" href="class_easy_qt_sql_1_1_database.htm">Database</a> &amp;&amp;other)</td></tr>
+<tr class="separator:a4ba16ffeda09410df95720f2f7e9d872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00ada326c3f4b3b01be26c552ad665dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_easy_qt_sql_1_1_database.htm">Database</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_easy_qt_sql_1_1_database.htm#a00ada326c3f4b3b01be26c552ad665dc">operator=</a> (<a class="el" href="class_easy_qt_sql_1_1_database.htm">Database</a> &amp;&amp;other)</td></tr>
+<tr class="separator:a00ada326c3f4b3b01be26c552ad665dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55fa6c1582cdd3dd6981f53e61dce6b4"><td class="memItemLeft" align="right" valign="top">QSqlError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_easy_qt_sql_1_1_database.htm#a55fa6c1582cdd3dd6981f53e61dce6b4">lastError</a> () const</td></tr>
 <tr class="memdesc:a55fa6c1582cdd3dd6981f53e61dce6b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns information about the last error that occurred on the underlying database.  <a href="#a55fa6c1582cdd3dd6981f53e61dce6b4">More...</a><br /></td></tr>
 <tr class="separator:a55fa6c1582cdd3dd6981f53e61dce6b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,7 +174,7 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><p>QSqlDatabase wrapper. </p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> test()</div><div class="line">{</div><div class="line">   QSqlDatabase db = QSqlDatabase::addDatabase(<span class="stringliteral">&quot;QSQLITE&quot;</span>);</div><div class="line">   db.setDatabaseName(<span class="stringliteral">&quot;:memory:&quot;</span>);</div><div class="line"></div><div class="line">   <span class="keywordflow">try</span></div><div class="line">   {</div><div class="line">      <a class="code" href="class_database.htm">Database</a> sdb(db);</div><div class="line"></div><div class="line">      sdb.execNonQuery(<span class="stringliteral">&quot;CREATE TABLE table (a int, b int, c int, d text)&quot;</span>);</div><div class="line">   }</div><div class="line">   <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code" href="class_d_b_exception.htm">DBException</a> &amp;e)</div><div class="line">   {</div><div class="line">      <span class="comment">//you can handle all the errors at one point</span></div><div class="line"></div><div class="line">      qDebug() &lt;&lt; e.<a class="code" href="class_d_b_exception.htm#adf142ded3fb236826a5a6ba4a606e584">lastError</a> &lt;&lt; e.<a class="code" href="class_d_b_exception.htm#a3ec8b4b593abee155554472ae0b58f12">lastQuery</a>;</div><div class="line">   }</div><div class="line">}</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a456e50298d0dd2bb89ddbadee7bf2da5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a456e50298d0dd2bb89ddbadee7bf2da5">&#9670;&nbsp;</a></span>Database()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a456e50298d0dd2bb89ddbadee7bf2da5">&#9670;&nbsp;</a></span>Database() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,7 +192,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -205,6 +209,32 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a4ba16ffeda09410df95720f2f7e9d872"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ba16ffeda09410df95720f2f7e9d872">&#9670;&nbsp;</a></span>Database() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EasyQtSql::Database::Database </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_easy_qt_sql_1_1_database.htm">Database</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -477,6 +507,32 @@ template&lt;typename Func &gt; </div>
 </div><div class="memdoc">
 
 <p>Returns information about the last error that occurred on the underlying database. </p>
+
+</div>
+</div>
+<a id="a00ada326c3f4b3b01be26c552ad665dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00ada326c3f4b3b01be26c552ad665dc">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_easy_qt_sql_1_1_database.htm">Database</a>&amp; EasyQtSql::Database::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_easy_qt_sql_1_1_database.htm">Database</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

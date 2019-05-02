@@ -248,9 +248,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a79a40fde15ca3ceaa4f0c7b8ba649558"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_query_result.htm#a79a40fde15ca3ceaa4f0c7b8ba649558">fetchObject</a> (QObject &amp;object) const</td></tr>
 <tr class="memdesc:a79a40fde15ca3ceaa4f0c7b8ba649558"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills Q_OBJECT object properties with data fetched from current result row.  <a href="#a79a40fde15ca3ceaa4f0c7b8ba649558">More...</a><br /></td></tr>
 <tr class="separator:a79a40fde15ca3ceaa4f0c7b8ba649558"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8769dd2d6e77b2f669ce206e283464a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_query_result.htm#af8769dd2d6e77b2f669ce206e283464a">fetchGadget</a> (const QMetaObject &amp;metaobject, void *gadget)</td></tr>
-<tr class="memdesc:af8769dd2d6e77b2f669ce206e283464a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills Q_GADGET object properties with data fetched from current result row.  <a href="#af8769dd2d6e77b2f669ce206e283464a">More...</a><br /></td></tr>
-<tr class="separator:af8769dd2d6e77b2f669ce206e283464a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53a94d8a3a9ca6916716d79b5fb48837"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a53a94d8a3a9ca6916716d79b5fb48837"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_query_result.htm#a53a94d8a3a9ca6916716d79b5fb48837">fetchGadget</a> (T &amp;gadget) const</td></tr>
+<tr class="memdesc:a53a94d8a3a9ca6916716d79b5fb48837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills Q_GADGET object properties with data fetched from current result row.  <a href="#a53a94d8a3a9ca6916716d79b5fb48837">More...</a><br /></td></tr>
+<tr class="separator:a53a94d8a3a9ca6916716d79b5fb48837"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f79c838a9fcd4a5d48e61abc79612e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_query_result.htm#a0f79c838a9fcd4a5d48e61abc79612e9">fetchMap</a> (QVariantMap &amp;map) const</td></tr>
 <tr class="memdesc:a0f79c838a9fcd4a5d48e61abc79612e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills QVariantMap with values fetched from current result row. Key is QString (result column name) and value is QVariant value.  <a href="#a0f79c838a9fcd4a5d48e61abc79612e9">More...</a><br /></td></tr>
 <tr class="separator:a0f79c838a9fcd4a5d48e61abc79612e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -421,11 +422,13 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="af8769dd2d6e77b2f669ce206e283464a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8769dd2d6e77b2f669ce206e283464a">&#9670;&nbsp;</a></span>fetchGadget()</h2>
+<a id="a53a94d8a3a9ca6916716d79b5fb48837"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53a94d8a3a9ca6916716d79b5fb48837">&#9670;&nbsp;</a></span>fetchGadget()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -433,19 +436,9 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void QueryResult::fetchGadget </td>
           <td>(</td>
-          <td class="paramtype">const QMetaObject &amp;&#160;</td>
-          <td class="paramname"><em>metaobject</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>gadget</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>gadget</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -458,10 +451,9 @@ Friends</h2></td></tr>
 <p>Fills Q_GADGET object properties with data fetched from current result row. </p>
 <p>Qt Meta-Object System used. Only writable properties can be filled.</p>
 <p>C++ struct fields will be mapped on SQL result table by Q_PROPERTY member names. For example, if Q_GADGET struct contains Q_PROPERTY named "e" but SELECT query defines no "e" column, object property "e" not affected by the method.</p>
-<div class="fragment"><div class="line"><span class="keyword">struct </span>Row</div><div class="line">{</div><div class="line">   <span class="keywordtype">int</span> a;</div><div class="line">   <span class="keywordtype">int</span> b;</div><div class="line">   <span class="keywordtype">int</span> c;</div><div class="line">   QString d;</div><div class="line">   <span class="keywordtype">int</span> e;</div><div class="line"></div><div class="line"><span class="keyword">private</span>:</div><div class="line">   Q_GADGET</div><div class="line"></div><div class="line">   <span class="comment">//property &quot;a&quot; will be filled with &quot;a&quot; column of the Select SQL query result</span></div><div class="line">   Q_PROPERTY(<span class="keywordtype">int</span> a MEMBER a)</div><div class="line">   Q_PROPERTY(<span class="keywordtype">int</span> b MEMBER b)</div><div class="line">   Q_PROPERTY(<span class="keywordtype">int</span> c MEMBER c)</div><div class="line">   Q_PROPERTY(QString d MEMBER d)</div><div class="line"></div><div class="line">   <span class="comment">//property e will be ignored in the example because there is no e field in the Select SQL query result</span></div><div class="line">   Q_PROPERTY(<span class="keywordtype">int</span> e MEMBER e)</div><div class="line">};</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> test()</div><div class="line">{</div><div class="line">   <a class="code" href="class_transaction.htm">Transaction</a> t;</div><div class="line">   <a class="code" href="class_query_result.htm">QueryResult</a> res = t.<a class="code" href="class_database.htm#a05c1ac255cdba9781f8bf306801bca70">execQuery</a>(<span class="stringliteral">&quot;SELECT a, b, c, d FROM table&quot;</span>);</div><div class="line"></div><div class="line">   <span class="keywordflow">while</span> (res.<a class="code" href="class_query_result.htm#a1c756382c20c126979b28715d529c054">next</a>())</div><div class="line">   {</div><div class="line">      <span class="comment">//Row instance (Q_GADGET structure)</span></div><div class="line">      Row testRow;</div><div class="line"></div><div class="line">      <span class="comment">//fetch testRow from current result row, properties a, b, c, d will be filled here:</span></div><div class="line">      res.<a class="code" href="class_query_result.htm#af8769dd2d6e77b2f669ce206e283464a">fetchGadget</a>(testRow.staticMetaObject, &amp;testRow);</div><div class="line">   }</div><div class="line">}</div></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>Row</div><div class="line">{</div><div class="line">   <span class="keywordtype">int</span> a;</div><div class="line">   <span class="keywordtype">int</span> b;</div><div class="line">   <span class="keywordtype">int</span> c;</div><div class="line">   QString d;</div><div class="line">   <span class="keywordtype">int</span> e;</div><div class="line"></div><div class="line"><span class="keyword">private</span>:</div><div class="line">   Q_GADGET</div><div class="line"></div><div class="line">   <span class="comment">//property &quot;a&quot; will be filled with &quot;a&quot; column of the Select SQL query result</span></div><div class="line">   Q_PROPERTY(<span class="keywordtype">int</span> a MEMBER a)</div><div class="line">   Q_PROPERTY(<span class="keywordtype">int</span> b MEMBER b)</div><div class="line">   Q_PROPERTY(<span class="keywordtype">int</span> c MEMBER c)</div><div class="line">   Q_PROPERTY(QString d MEMBER d)</div><div class="line"></div><div class="line">   <span class="comment">//property e will be ignored in the example because there is no e field in the Select SQL query result</span></div><div class="line">   Q_PROPERTY(<span class="keywordtype">int</span> e MEMBER e)</div><div class="line">};</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> test()</div><div class="line">{</div><div class="line">   <a class="code" href="class_transaction.htm">Transaction</a> t;</div><div class="line">   <a class="code" href="class_query_result.htm">QueryResult</a> res = t.<a class="code" href="class_database.htm#a05c1ac255cdba9781f8bf306801bca70">execQuery</a>(<span class="stringliteral">&quot;SELECT a, b, c, d FROM table&quot;</span>);</div><div class="line"></div><div class="line">   <span class="keywordflow">while</span> (res.<a class="code" href="class_query_result.htm#a1c756382c20c126979b28715d529c054">next</a>())</div><div class="line">   {</div><div class="line">      <span class="comment">//Row instance (Q_GADGET structure)</span></div><div class="line">      Row testRow;</div><div class="line"></div><div class="line">      <span class="comment">//fetch testRow from current result row, properties a, b, c, d will be filled here:</span></div><div class="line">      res.<a class="code" href="class_query_result.htm#a53a94d8a3a9ca6916716d79b5fb48837">fetchGadget</a>(testRow);</div><div class="line">   }</div><div class="line">}</div></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">metaobject</td><td>staticMetaObject field from Q_GADGET object </td></tr>
-    <tr><td class="paramname">gadget</td><td>Q_GADGET object pointer. </td></tr>
+    <tr><td class="paramname">gadget</td><td>Q_GADGET reference </td></tr>
   </table>
   </dd>
 </dl>
@@ -567,8 +559,7 @@ Friends</h2></td></tr>
 <p>C++ class fields (properties) will be mapped on SQL result table by Q_PROPERTY member names. For example, if Q_OBJECT class contains Q_PROPERTY named "e" but SELECT query defines no "e" column, object property "e" not affected by the method.</p>
 <div class="fragment"><div class="line"><span class="keyword">class </span>TestObject : <span class="keyword">public</span> QObject</div><div class="line">{</div><div class="line">   Q_OBJECT</div><div class="line"></div><div class="line">   <span class="comment">//property &quot;a&quot; will be filled with &quot;a&quot; column of the Select SQL query result</span></div><div class="line">   Q_PROPERTY(<span class="keywordtype">int</span> a MEMBER a)</div><div class="line">   Q_PROPERTY(<span class="keywordtype">int</span> b MEMBER b)</div><div class="line">   Q_PROPERTY(<span class="keywordtype">int</span> c MEMBER c)</div><div class="line">   Q_PROPERTY(QString d MEMBER d)</div><div class="line"></div><div class="line">   <span class="comment">//property e will be ignored in the example because there is no e field in the Select SQL query result</span></div><div class="line">   Q_PROPERTY(<span class="keywordtype">int</span> e MEMBER e)</div><div class="line"></div><div class="line"><span class="keyword">private</span>:</div><div class="line">   <span class="keywordtype">int</span> a;</div><div class="line">   <span class="keywordtype">int</span> b;</div><div class="line">   <span class="keywordtype">int</span> c;</div><div class="line">   QString d;</div><div class="line">   <span class="keywordtype">int</span> e;</div><div class="line">};</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> test()</div><div class="line">{</div><div class="line">   <a class="code" href="class_transaction.htm">Transaction</a> t;</div><div class="line">   <a class="code" href="class_query_result.htm">QueryResult</a> res = t.<a class="code" href="class_database.htm#a05c1ac255cdba9781f8bf306801bca70">execQuery</a>(<span class="stringliteral">&quot;SELECT a, b, c, d FROM table&quot;</span>);</div><div class="line"></div><div class="line">   <span class="keywordflow">while</span> (res.<a class="code" href="class_query_result.htm#a1c756382c20c126979b28715d529c054">next</a>())</div><div class="line">   {</div><div class="line">      <span class="comment">//TestObject instance (Q_OBJECT class)</span></div><div class="line">      TestObject testRow;</div><div class="line">      res.<a class="code" href="class_query_result.htm#a79a40fde15ca3ceaa4f0c7b8ba649558">fetchObject</a>(testRow);</div><div class="line">   }</div><div class="line">}</div></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">metaobject</td><td>staticMetaObject field from Q_GADGET object </td></tr>
-    <tr><td class="paramname">gadget</td><td>Q_GADGET object pointer. </td></tr>
+    <tr><td class="paramname">object</td><td>Q_OBJECT object reference </td></tr>
   </table>
   </dd>
 </dl>

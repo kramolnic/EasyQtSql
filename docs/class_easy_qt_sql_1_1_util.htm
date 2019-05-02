@@ -94,24 +94,33 @@ $(document).ready(function(){initNavTree('class_easy_qt_sql_1_1_util.htm','');})
 </div><!--header-->
 <div class="contents">
 
+<p>Utility functions.  
+ <a href="class_easy_qt_sql_1_1_util.htm#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_easy_qt_sql_8h_source.htm">EasyQtSql.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ade62df9ee2a3a40c94d7aad8b6cae23e"><td class="memTemplParams" colspan="2">template&lt;typename Func &gt; </td></tr>
 <tr class="memitem:ade62df9ee2a3a40c94d7aad8b6cae23e"><td class="memTemplItemLeft" align="right" valign="top">static int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_easy_qt_sql_1_1_util.htm#ade62df9ee2a3a40c94d7aad8b6cae23e">each</a> (<a class="el" href="class_easy_qt_sql_1_1_query_result.htm">QueryResult</a> &amp;res, Func &amp;&amp;f)</td></tr>
+<tr class="memdesc:ade62df9ee2a3a40c94d7aad8b6cae23e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies function (lambda) f to each row in res.  <a href="#ade62df9ee2a3a40c94d7aad8b6cae23e">More...</a><br /></td></tr>
 <tr class="separator:ade62df9ee2a3a40c94d7aad8b6cae23e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56dc7a2122381b76edac208e307f2eac"><td class="memTemplParams" colspan="2">template&lt;typename Func &gt; </td></tr>
-<tr class="memitem:a56dc7a2122381b76edac208e307f2eac"><td class="memTemplItemLeft" align="right" valign="top">static int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_easy_qt_sql_1_1_util.htm#a56dc7a2122381b76edac208e307f2eac">first</a> (<a class="el" href="class_easy_qt_sql_1_1_query_result.htm">QueryResult</a> &amp;res, Func &amp;&amp;f)</td></tr>
-<tr class="separator:a56dc7a2122381b76edac208e307f2eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a258b56d74e612aa2c40686accdf797d8"><td class="memTemplParams" colspan="2">template&lt;typename Func &gt; </td></tr>
 <tr class="memitem:a258b56d74e612aa2c40686accdf797d8"><td class="memTemplItemLeft" align="right" valign="top">static int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_easy_qt_sql_1_1_util.htm#a258b56d74e612aa2c40686accdf797d8">range</a> (<a class="el" href="class_easy_qt_sql_1_1_query_result.htm">QueryResult</a> &amp;res, int start, int count, Func &amp;&amp;f)</td></tr>
+<tr class="memdesc:a258b56d74e612aa2c40686accdf797d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies function (lambda) f to count rows starting from start index.  <a href="#a258b56d74e612aa2c40686accdf797d8">More...</a><br /></td></tr>
 <tr class="separator:a258b56d74e612aa2c40686accdf797d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add143e9560791e7a0ffb52f4fae48eeb"><td class="memTemplParams" colspan="2">template&lt;typename Func &gt; </td></tr>
 <tr class="memitem:add143e9560791e7a0ffb52f4fae48eeb"><td class="memTemplItemLeft" align="right" valign="top">static int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_easy_qt_sql_1_1_util.htm#add143e9560791e7a0ffb52f4fae48eeb">top</a> (<a class="el" href="class_easy_qt_sql_1_1_query_result.htm">QueryResult</a> &amp;res, int topCount, Func &amp;&amp;f)</td></tr>
+<tr class="memdesc:add143e9560791e7a0ffb52f4fae48eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies function (lambda) f to topCount rows from res.  <a href="#add143e9560791e7a0ffb52f4fae48eeb">More...</a><br /></td></tr>
 <tr class="separator:add143e9560791e7a0ffb52f4fae48eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56dc7a2122381b76edac208e307f2eac"><td class="memTemplParams" colspan="2">template&lt;typename Func &gt; </td></tr>
+<tr class="memitem:a56dc7a2122381b76edac208e307f2eac"><td class="memTemplItemLeft" align="right" valign="top">static int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_easy_qt_sql_1_1_util.htm#a56dc7a2122381b76edac208e307f2eac">first</a> (<a class="el" href="class_easy_qt_sql_1_1_query_result.htm">QueryResult</a> &amp;res, Func &amp;&amp;f)</td></tr>
+<tr class="memdesc:a56dc7a2122381b76edac208e307f2eac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies function (lambda) f to first result row.  <a href="#a56dc7a2122381b76edac208e307f2eac">More...</a><br /></td></tr>
+<tr class="separator:a56dc7a2122381b76edac208e307f2eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Utility functions. </p>
+<div class="fragment"><div class="line">t.<a class="code" href="class_database.htm#ad2283c7025501aafc33530d19beb02b4">first</a>(<span class="stringliteral">&quot;SELECT 1&quot;</span>, [](<span class="keyword">const</span> <a class="code" href="class_query_result.htm">QueryResult</a> &amp;row){</div><div class="line">   qDebug() &lt;&lt; row.<a class="code" href="class_query_result.htm#a5e3b49cb821efecac406606d9e3adb13">scalar</a>&lt;<span class="keywordtype">bool</span>&gt;();</div><div class="line">});</div><div class="line"></div><div class="line">t.<a class="code" href="class_database.htm#a7a13f4fc603fb829f123894d9abd6ea7">each</a>(<span class="stringliteral">&quot;SELECT * FROM table1&quot;</span>, [](<span class="keyword">const</span> <a class="code" href="class_query_result.htm">QueryResult</a> &amp;row){</div><div class="line">   qDebug() &lt;&lt; row.<a class="code" href="class_query_result.htm#a023bd84f7010368d616d7dbb1b399a06">toMap</a>();</div><div class="line">});</div><div class="line"></div><div class="line"><a class="code" href="class_prepared_query.htm">PreparedQuery</a> query = t.<a class="code" href="class_database.htm#a03e2c9113452bb52bb7018ef2366bce1">prepare</a>(<span class="stringliteral">&quot;SELECT a, b, c, d FROM table1 WHERE a = ? AND b = ?&quot;</span>);</div><div class="line"></div><div class="line"><a class="code" href="class_easy_qt_sql_1_1_util.htm#ade62df9ee2a3a40c94d7aad8b6cae23e">Util::each</a>(query.<a class="code" href="class_prepared_query.htm#a1013aea1638d6d04868ce39130bc1b67">exec</a>(1, 2), [](<span class="keyword">const</span> <a class="code" href="class_query_result.htm">QueryResult</a> &amp;row){</div><div class="line">   qDebug() &lt;&lt; row.<a class="code" href="class_query_result.htm#a023bd84f7010368d616d7dbb1b399a06">toMap</a>();</div><div class="line">});</div></div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ade62df9ee2a3a40c94d7aad8b6cae23e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ade62df9ee2a3a40c94d7aad8b6cae23e">&#9670;&nbsp;</a></span>each()</h2>
 
@@ -147,6 +156,15 @@ template&lt;typename Func &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Applies function (lambda) f to each row in res. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">res</td><td><a class="el" href="class_easy_qt_sql_1_1_query_result.htm" title="QSqlQuery wrapper with handy data fetch methods. ">QueryResult</a> </td></tr>
+    <tr><td class="paramname">f</td><td>Function </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -185,6 +203,16 @@ template&lt;typename Func &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Applies function (lambda) f to first result row. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">res</td><td><a class="el" href="class_easy_qt_sql_1_1_query_result.htm" title="QSqlQuery wrapper with handy data fetch methods. ">QueryResult</a> <br />
+</td></tr>
+    <tr><td class="paramname">f</td><td>Function </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -236,6 +264,17 @@ template&lt;typename Func &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Applies function (lambda) f to count rows starting from start index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">res</td><td><a class="el" href="class_easy_qt_sql_1_1_query_result.htm" title="QSqlQuery wrapper with handy data fetch methods. ">QueryResult</a> </td></tr>
+    <tr><td class="paramname">start</td><td>Index of start row </td></tr>
+    <tr><td class="paramname">count</td><td>Rows count </td></tr>
+    <tr><td class="paramname">f</td><td>Function </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="add143e9560791e7a0ffb52f4fae48eeb"></a>
@@ -279,6 +318,17 @@ template&lt;typename Func &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Applies function (lambda) f to topCount rows from res. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">res</td><td><a class="el" href="class_easy_qt_sql_1_1_query_result.htm" title="QSqlQuery wrapper with handy data fetch methods. ">QueryResult</a> </td></tr>
+    <tr><td class="paramname">topCount</td><td>Count of rows </td></tr>
+    <tr><td class="paramname">count</td><td>Rows count </td></tr>
+    <tr><td class="paramname">f</td><td>Function </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

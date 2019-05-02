@@ -24,7 +24,7 @@ You need to install:
 
 The library was compiled and tested with:
 * MS Visual C++ Compiler 14.0 / Qt5.6 and Qt5.7
-* Linux Kubuntu GCC compiler / Qt5.9
+* gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) / Qt5.9
 
 ### Quick Start Guide
 
